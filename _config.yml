@@ -10,7 +10,7 @@ github_username:  unswsecuritysociety
 
 # Template Keys
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://unswsecurity.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.unswsecurity.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 markdown: kramdown
 gems:
