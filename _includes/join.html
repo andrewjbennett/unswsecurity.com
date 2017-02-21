@@ -1,0 +1,14 @@
+<div class="join-links">
+  <h1>Join the Society</h1>
+  <ul>
+    {% if site.orgsync %}
+    <li><a class="orgsync" href="{{ site.orgsync }}">OrgSync</a></li>
+    {% endif %}
+    {% if site.slack %}
+    <li><a class="slack" href="{{ site.slack }}">Slack</a></li>
+    {% endif %}
+    {% if site.facebook_group %}
+    <li><a class="facebook" href="{{ site.facebook_group }}">Facebook</a></li>
+    {% endif %}
+  </ul>
+</div>

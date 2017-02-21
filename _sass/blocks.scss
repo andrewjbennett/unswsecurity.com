@@ -53,3 +53,16 @@
   float: none;
   clear: both;
 }
+
+.content-block {
+  @extend .no-buffer;
+  background-color: $bg-black;
+  margin: $spacing-small 0;
+  border: {
+    color: $fg-line;
+    width: $line-normal 0;
+    style: solid;
+  }
+  float: none;
+  clear: both;
+}

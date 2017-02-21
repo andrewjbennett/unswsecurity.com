@@ -1,0 +1,19 @@
+# Just a basic list of events for now
+- name: "\"Hackers\" Movie Screening"
+  description: >
+    We'll be gathering around to watch the cult
+     classic film <i>Hackers</i> featuring
+     Angelena Jolie and Jonny Lee Miller.
+     Snacks will be provided.
+  location: "Seminar Room, Floor 1, K17 Building"
+  start: 2017-02-22 18:00:00 +1100
+  end: 2017-02-22 20:00:00 +1100
+- name: "Boston Key Party"
+  description: >
+    We'll be competing as a group in the <a 
+    href="http://bostonkeyparty.net/">Boston Key Party</a>.
+    Details will be on 
+    <a href="https://k17hackers.slack.com/messages/ctfs/">Slack</a>.
+  location: "Slack"
+  start: 2017-02-25 01:00:00 +0000
+  end: 2017-02-27 01:00:00 +0000

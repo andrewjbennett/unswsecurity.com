@@ -1,4 +1,54 @@
 ---
 layout: base
 ---
-<h1>Build in progress<h1>
+
+<div class="logo-banner">
+  <img src="{{ "/assets/logobanner_white.png" | absolute_url}}"
+       alt="UNSW Security Society">
+</div>
+
+<div class="bigtext">
+  <p>As a key part of the security community within UNSW,
+  the <b>UNSW Security Society</b> organises events for you to meet
+  other students interested in cyber security and to learn, develop,
+  and test skills in hacking, cryptography, general cyber security.</p>
+</div>
+
+{% include join.html %}
+
+<div class="third">
+  <h1>Movie Nights</h1>
+  <p>During <b>movie nights</b> we all come together to watch security
+  themed films for fun, as a chance to get to know other members of the
+  society or to help intorduce new members</p>
+  <h1>Meetups</h1>
+  <p>Sometimes it's fun to just chill out with friends and chat. We'll be
+  running meetups throughout the year where you can come and hang out with
+  society members, introduce your friends to the society, and discuss you
+  hacking endeavours.</p>
+</div>
+
+<div class="third">
+  <h1>CTFs</h1>
+  <p>We frequently take pare in <b>Capture the Flag</b> competitons
+  where we undertack securty based challenges to decipher codes, 
+  reverse software, break encryption, and similar tasks, competing
+  against other teams from around the world.</p>
+
+  <p>We also run our own <b>Capture the Flag</b> competitons throughout
+  the year for society members to participate in.</p>
+</div>
+
+<div class="third">
+  <h1>Workshops and Talks</h1>
+  <p>For those who are new to cyber security or who are keen to broaden your
+  skill set, we run workshops throughout the year to introduce cyber security
+  topics, such as <i>web security</i>, <i>cryptography</i>, and
+  <i>exploiting software</i>.</p>
+  
+  <p>These workshops are also aim to teach the skills relevant to the 
+  <b>Capture the Flag</b> competitions we run and compete in, as well as
+  reviewing challenges from events after we run them.</p>
+</div>
+
+{% include events.html %}
