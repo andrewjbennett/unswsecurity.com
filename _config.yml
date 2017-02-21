@@ -26,6 +26,7 @@ defaults:
       layout: base
 
 # Build settings
+timezone: Australia/Sydney
 permalink: pretty
 markdown: kramdown
 gems:
