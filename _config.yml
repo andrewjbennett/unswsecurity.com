@@ -12,7 +12,7 @@ github_username:  unswsecuritysociety
 
 # Template Keys
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.unswsecurity.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.unswsecurity.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Defaults
 defaults:

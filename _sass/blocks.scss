@@ -47,4 +47,9 @@
 .content-wrap {
   min-width: $content-min;
   max-width: $content-max; 
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+  float: none;
+  clear: both;
 }
