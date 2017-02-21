@@ -9,6 +9,10 @@ email: "&#x65;&#x78;&#x65;&#x63;&#x73;&#x40;&#x75;&#x6E;&#x73;&#x77;&#x73;&#x65;
 address: "UNSW Security Society<br/>Building K17<br/>UNSW Sydney, NSW 2052"
 twitter_username: jekyllrb
 github_username:  unswsecuritysociety
+orgsync: "https://orgsync.com/119552"
+facebook_page: "https://www.facebook.com/unswsecsoc"
+facebook_group: "https://www.facebook.com/groups/dotsoc/"
+slack: "https://k17hackers.slack.com/"
 
 # Template Keys
 baseurl: "" # the subpath of your site, e.g. /blog

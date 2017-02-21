@@ -42,10 +42,11 @@ header.site {
       float: none;
       clear: both;
       max-height: 0;
-      transition: max-height 0.25s;
+      transition: max-height 0.5s;
 
       &.shown {
-        max-height: 100vh;
+        transition: max-height 0.5s;
+        max-height: 8em;
       }
     }
 
