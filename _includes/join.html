@@ -1,6 +1,9 @@
 <div class="join-links">
   <h1>Join the Society</h1>
   <ul>
+    {% if site.signup %}
+    <li><a class="signup" href="{{ site.signup }}">Sign-Up Form</a></li>
+    {% endif %}
     {% if site.orgsync %}
     <li><a class="orgsync" href="{{ site.orgsync }}">OrgSync</a></li>
     {% endif %}

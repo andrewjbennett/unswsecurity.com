@@ -3,7 +3,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: UNSW Securtiy Society
+title: UNSW Security Society
 email: "&#x65;&#x78;&#x65;&#x63;&#x73;&#x40;&#x75;&#x6E;&#x73;&#x77;&#x73;&#x65;&#x63;&#x75;&#x72;&#x69;&#x74;&#x79;&#x2E;&#x63;&#x6F;&#x6D;"
 # phone: "+61 4 1234 5678"
 address: "UNSW Security Society<br/>Building K17<br/>UNSW Sydney, NSW 2052"
@@ -13,6 +13,7 @@ orgsync: "https://orgsync.com/119552"
 facebook_page: "https://www.facebook.com/unswsecsoc"
 facebook_group: "https://www.facebook.com/groups/dotsoc/"
 slack: "https://k17hackers.slack.com/"
+signup: "https://syeoh.typeform.com/to/aHuBCw"
 
 # Template Keys
 baseurl: "" # the subpath of your site, e.g. /blog

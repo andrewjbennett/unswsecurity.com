@@ -160,8 +160,12 @@ footer.site {
   li {
     @extend .no-buffer;
     float: left;
-    width: 33.33%;
+    width: 25%;
     text-align: center;
+
+    @include device($tablet-width) {
+      width: 50%;
+    }
 
     @include device($mobile-width) {
       width: 100%;
@@ -231,4 +235,8 @@ footer.site {
       font-size: 1em;
     }
   }
+}
+
+.flag {
+  display: none;
 }
