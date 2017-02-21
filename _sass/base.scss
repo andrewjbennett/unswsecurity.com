@@ -1,0 +1,132 @@
+header.site {
+  @extend .no-buffer;
+  background-color: $bg-black;
+  border-bottom: $line-normal solid $fg-line;
+
+  .wrapper {
+    @extend .no-buffer;
+    @extend .content-wrap;
+  }
+
+  h1 {
+    font-size: 18pt;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.2em 0.6em;
+    float: left;
+    clear: left;
+    a {
+      color: $fg-dark;
+      text-decoration: none;
+    }
+  }
+
+  .show-nav {
+    display: none;
+    font-size: 18pt;
+    padding: 0.3em 0.6em;
+
+    @include device($tablet-width) {
+      display: block;
+      float: right;
+      clear: right;
+    }
+  }
+
+  nav {
+    @extend .no-buffer;
+    float: right;
+    clear: right;
+
+    @include device($tablet-width) {
+      float: none;
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.25s;
+
+      &.shown {
+        max-height: 100vh;
+      }
+    }
+
+    ul {
+      @extend .no-buffer;
+      display: block;
+    }
+    li {
+      @extend .no-buffer;
+      list-style: none;
+      float: right;
+
+      @include device($tablet-width) {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+
+      @include device($mobile-width) {
+        float: none;
+        width: auto;
+      }
+    }
+    a {
+      @include button($fg-dark, $bg-dark, $fg-link);
+    }
+  }
+}
+
+footer.site {
+  background-color: $bg-black;
+  $spacing: 12px;
+
+  .wrapper {
+    @extend .no-buffer;
+    @extend .content-wrap;
+    padding-top: $spacing;
+  }
+
+  .left, .middle, .right {
+    @extend .no-buffer;
+    width: 30%;
+    float: left;
+
+    @include device($tablet-width) {
+      width: 50%;
+    }
+
+    @include device($mobile-width) {
+      width: 100%;
+      float: none;
+    }
+
+    .spacer {
+      width: auto;
+      margin: $spacing;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 14pt;
+    margin: 0.2em $spacing;
+  }
+
+  p {
+    font-family: $monospace-font;
+    font-weight: $monospace-weight;
+    margin: 0.2em $spacing $spacing $spacing;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.2em $spacing $spacing $spacing;
+    padding: 0;
+  }
+
+  img {
+    max-width: 60%;
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}

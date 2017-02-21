@@ -1,0 +1,34 @@
+---
+---
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/main.css" | relative_url }}" />
+  </head>
+  <body>
+    
+    <!-- Header -->
+    {% include site_header.html %}
+
+    <!-- Content -->
+    <div class="content-wrap">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% include site_footer.html %}
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{ "/assets/site.js" | absolute_url}}">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+.no-buffer {
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+
+@mixin button($fg, $bg, $selected) {
+  display: block;
+  border-radius: 4px;
+  background-color: $fg;
+  color: $bg;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  margin: 4px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $headline-font;
+  font-weight: $headline-weight;
+
+  &:hover {
+    background-color: lighten($fg, 10%);
+  }
+
+  &:active {
+    background-color: darken($fg, 10%);
+  }
+  
+  &.selected {
+    background-color: $selected;
+  }
+
+  &.selected:hover {
+    background-color: lighten($selected, 10%);
+  }
+
+  &.selected:active {
+    background-color: darken($selected, 10%);
+  }
+}
+
+@mixin device($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+.content-wrap {
+  min-width: $content-min;
+  max-width: $content-max; 
+}

@@ -1,0 +1,28 @@
+html, body {
+  @extend .no-buffer;
+  font-family: $body-font;
+  font-weight: $body-weight;
+  color: $fg-dark;
+  background-color: $bg-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-font;
+  font-weight: $headline-weight;
+}
+
+pre, code {
+  font-family: $monospace-font;
+  font-weight: $monospace-weight;
+}
+
+a {
+  text-decoration: none;
+  color: $fg-link;
+  font-weight: $body-bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

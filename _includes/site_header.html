@@ -1,0 +1,16 @@
+<header class="site">
+  <div class="wrapper">
+    <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+    <i class="fa fa-bars show-nav"></i>
+    <nav class="title-nav">
+      <ul>{% for site_page in site.pages %}{% if site_page.title-nav %}
+        <li>
+          <a class="{% if site_page.url == page.url %}selected{% endif %}" 
+             href="{{ site_page.url | absolute_url }}" >
+            {{ site_page.title }}
+          </a>
+        </li>
+      {% endif %}{% endfor %}</ul>
+    </nav>
+  </div>
+</header>

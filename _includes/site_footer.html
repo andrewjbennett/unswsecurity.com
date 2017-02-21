@@ -1,0 +1,38 @@
+<footer class="site">
+  <div class="wrapper">
+    <!-- Contact Section -->
+    <div class="left">
+      {% if site.address %}
+      <h1>Address</h1>
+      <p>{{ site.address }}</p>
+      {% endif %}
+
+      {% if site.email %}
+      <h1>Email</h1>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+
+      {% if site.phone %}
+      <h1>Phone</h1>
+      <p><a href="phone:{{ site.phone }}">{{ site.phone }}</a></p>
+      {% endif %}
+    </div>
+
+    <!-- Site Map -->
+    <div class="middle">
+      <h1>Site Map</h1>
+
+      <ul>{% for page in site.pages %}{% if page.site-map %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}{% endfor %}</ul>
+      </ul>
+    </div>
+
+    <!-- ARC -->
+    <div class="right">
+      <div class="spacer">
+        <img src="{{ "/assets/arc.jpg" | absolute_url }}" alt="Supported by Arc" />
+      </div>
+    </div>
+  <div class="wrapper">
+</footer>
