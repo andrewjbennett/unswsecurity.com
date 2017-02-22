@@ -24,7 +24,7 @@ header.site {
   .show-nav {
     display: none;
     font-size: 18pt;
-    padding: 0.3em 0.6em;
+    padding: 0.35em 0.4em;
 
     @include device($tablet-width) {
       display: block;
