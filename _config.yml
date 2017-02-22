@@ -13,7 +13,8 @@ orgsync: "https://orgsync.com/119552"
 facebook_page: "https://www.facebook.com/unswsecsoc"
 facebook_group: "https://www.facebook.com/groups/dotsoc/"
 slack: "https://k17hackers.slack.com/"
-signup: "https://syeoh.typeform.com/to/aHuBCw"
+#signup: "https://syeoh.typeform.com/to/aHuBCw"
+signup: "https://goo.gl/8jnXAi"
 
 # Template Keys
 baseurl: "" # the subpath of your site, e.g. /blog
