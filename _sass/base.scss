@@ -212,6 +212,10 @@ footer.site {
   font-size: 24pt;
   text-align: center;
   margin: $spacing-large $spacing;
+
+  @include device($mobile-width) {
+    font-size: 18pt;
+  }
 }
 
 .third {
