@@ -1,6 +1,7 @@
 <header class="site">
   <div class="wrapper">
-    <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+    <h1 class="full"><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+    <h1 class="short"><a href="{{ "/" | absolute_url }}">{{ site.title-short }}</a></h1>
     <i class="fa fa-bars show-nav"></i>
     <nav class="title-nav">
       <ul>{% for site_page in site.pages %}{% if site_page.title-nav %}

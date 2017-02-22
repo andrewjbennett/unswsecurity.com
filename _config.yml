@@ -4,6 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: UNSW Security Society
+title-short: UNSW SecSoc
 email: "&#x65;&#x78;&#x65;&#x63;&#x73;&#x40;&#x75;&#x6E;&#x73;&#x77;&#x73;&#x65;&#x63;&#x75;&#x72;&#x69;&#x74;&#x79;&#x2E;&#x63;&#x6F;&#x6D;"
 # phone: "+61 4 1234 5678"
 address: "UNSW Security Society<br/>Building K17<br/>UNSW Sydney, NSW 2052"

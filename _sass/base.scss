@@ -19,6 +19,20 @@ header.site {
       color: $fg-dark;
       text-decoration: none;
     }
+
+    &.short {
+      display: none;
+    }
+
+    @include device($mobile-width) {
+      &.full {
+        display: none;
+      }
+
+      &.short {
+        display: block;
+      }
+    }
   }
 
   .show-nav {
