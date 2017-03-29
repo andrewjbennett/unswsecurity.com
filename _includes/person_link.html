@@ -1,0 +1,2 @@
+{% assign person = site.data.people[include.person] %}
+<a href="{{ site.baseurl}}{% link people.html %}#{{include.person}}">{{ person.name }}</a>

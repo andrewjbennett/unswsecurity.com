@@ -1,0 +1,46 @@
+---
+title: Committee Members
+site-map: true
+---
+<h1>Current Committee</h1>
+
+<div class="committee">
+  {% assign roles = site.data.committee.current | group_by: "role" %}
+  {% for role in roles %}
+  <h2>{{ role.name }}</h2>
+  {% for member in role.items %}
+    {% include person.html person=member.person %}
+  {% endfor %}
+  {% endfor %}
+</div>
+
+<h1>Previous Committees</h1>
+
+{% for cmt in site.data.committee %}
+{% if cmt[0] != "current" %}
+{% assign committee = cmt[1] %}
+<h2>{{ cmt[0] }} Committee</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for member in committee %}
+    {% if member.person %}
+      {% assign name = site.data.people[member.person].name %}
+    {% else %}
+      {% assign name = member.name %}
+    {% endif %}
+      <tr>
+        <td>{{ member.role }}</td>
+        <td>{{ name }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endfor %}
+

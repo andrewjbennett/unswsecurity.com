@@ -1,7 +1,7 @@
 ---
 author: curtis
 title: "Test Newsletter"
-category: newsletter
+categories: newsletter ctf event sponsor
 ---
 
 # CTF Results

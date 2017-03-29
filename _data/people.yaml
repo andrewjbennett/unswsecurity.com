@@ -1,0 +1,64 @@
+# Add an object per unique person on the site
+#
+# These objects are used for post authors and committee members
+
+curtis:
+  name: Curtis Millar
+  slack: studley13
+  email: curtis@unswsecurity.com
+  twitter: CurtisMillar
+  gravatar: 423b9b3322b34e2769b2374cb4a63d8c
+  website: http://teamred.rocks/
+  phone: 0412 345 678
+  facebook: curtis.millar13
+  bio: >
+    This is a small bio about Curtis Millar. It is all in *plaintext*.
+  page: >
+    This is some secret information about **Curtis**.
+
+andrew:
+  name: Andrew Bennett
+  slack: andrew
+
+sean:
+  name: Sean Yeoh
+  slack: sy
+
+daniel:
+  name: Daniel Phillips
+  slack: deeps
+
+jordan:
+  name: Jordan Brown
+  slack: paste_bin
+
+weilon:
+  name: Weilon Ying
+  slack: whale
+
+clancy:
+  name: Clancy Rye
+  slack: gibs
+
+luke:
+  name: Luke Cusack
+  slack: ljc
+
+glenn:
+  name: Glenn McGuire
+  slack: glem
+
+cameron:
+  name: Cameron Lonsdale
+  slack: clonsdale
+
+mitchell:
+  name: Mitchell Shelton
+  slack: mitty
+
+# Placeholder person
+noone:
+  name: Some Person
+  bio: >
+    Just this guy, you know?
+

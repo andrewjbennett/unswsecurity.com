@@ -1,0 +1,46 @@
+# Current committe members
+#
+# Each must specify the `role` by title and have a `person` relating to
+# someone from people.
+current:
+  - role: President
+    person: andrew
+  - role: Vice President
+    person: daniel
+  - role: Arc Delegate
+    person: weilon
+  - role: Treasurer
+    person: sean
+  - role: Secretary
+    person: curtis
+  - role: Community Head
+    person: clancy
+  - role: CTF Head (Internal)
+    person: mitchell
+  - role: CTF Head (External)
+    person: luke
+  - role: CTF Head (External)
+    person: glenn
+  - role: Workshop Head
+    person: cameron
+
+
+# 2016 Committee Members
+# Each must specify role title.
+# Each must have either a `person`, referencing someone from people
+# or `name` with an explicit name.
+2016:
+  - role: President
+    person: andrew
+  - role: Arc Delegate
+    person: weilon
+  - role: Secretary
+    person: daniel
+  - role: Treasurer
+    name: Harry J.E. Day
+  - role: Sponsorhip Head
+    person: sean
+  - role: CTF Head
+    person: curtis
+  - role: CTF Head
+    person: jordan

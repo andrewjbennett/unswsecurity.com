@@ -1,0 +1,16 @@
+---
+title: People
+---
+
+{% for ident in site.data.people %}
+<div class="anchor-show" id="{{ident[0]}}">
+  {% assign id = ident[0] %}
+  {% include person.html person = id%}
+  {% if ident[1].page %}
+  <div class="page">
+    <h1>About</h1>
+    {{ ident[1].page | markdownify }}
+  </div>
+  {% endif %}
+</div>
+{% endfor %}

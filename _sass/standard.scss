@@ -13,6 +13,10 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: $headline-font;
   font-weight: $headline-weight;
+
+  a {
+    color: $fg-dark;
+  }
 }
 
 pre, code {
@@ -32,4 +36,49 @@ a {
 
 img {
   max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 4px;
+  min-width: 50%;
+
+  thead {
+    border-bottom: $line-normal solid $fg-dark;
+  }
+
+  tfoot {
+    border-top: $line-normal solid $fg-dark;
+  }
+
+  th, td {
+    border: {
+      width: 0 $line-thin;
+      style: solid;
+      color: $fg-dark;
+    }
+    margin: 0;
+    padding: $spacing-small $spacing;
+    outline: none;
+  }
+
+  th {
+    background-color: $bg-block;
+  }
+
+  tr {
+    border: {
+      width: $line-thin 0;
+      style: solid;
+      color: $fg-dark;
+    }
+  }
+}
+
+.anchor-show {
+  display: none;
+
+  &:target {
+    display: block;
+  }
 }

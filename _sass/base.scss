@@ -9,7 +9,7 @@ header.site {
   }
 
   h1 {
-    font-size: 19pt;
+    font-size: 22pt;
     text-transform: uppercase;
     margin: 0;
     padding: 0.2em 0.6em;
@@ -37,7 +37,7 @@ header.site {
 
   .show-nav {
     display: none;
-    font-size: 18pt;
+    font-size: 22pt;
     padding: 0.35em 0.4em;
 
     @include device($tablet-width) {
@@ -160,6 +160,15 @@ footer.site {
   p {
     margin: $spacing-small $spacing;
   }
+
+  table {
+    margin: $spacing-small auto;
+    padding: 0;
+
+    thead, tbody, tfoot {
+      margin: 0 $spacing;
+    }
+  }
 }
 
 .join-links {
@@ -188,18 +197,6 @@ footer.site {
 
     a {
       @include button($fg-dark, $bg-black, $fg-link);
-    
-      &.orgsync {
-        @include button(#5BBF21, $bg-black, $fg-link);
-      }
-    
-      &.slack {
-        @include button(#e32072, $bg-black, $fg-link);
-      }
-    
-      &.facebook {
-        @include button(#8b9dc3, $bg-black, $fg-link);
-      }
     }
   }
 }
@@ -218,9 +215,19 @@ footer.site {
   }
 }
 
+
+.half {
+  width: 50%;
+}
 .third {
-  @extend .no-buffer;
   width: 33.33%;
+}
+.quarter {
+  width: 25%;
+}
+
+.quarter, .third, .half {
+  @extend .no-buffer;
   float: left;
   text-align: center;
   
@@ -257,4 +264,55 @@ footer.site {
 
 .flag {
   display: none;
+}
+
+.person {
+  overflow: hidden;
+  text-align: left;
+
+  .ps-image {
+    float: left;
+    clear: left;
+    overflow: hidden;
+    margin: 0;
+
+    img {
+      border: $line-normal solid $fg-dark;
+      width: 96px;
+      height: 96px;
+      margin: $spacing-large $spacing;
+
+      @include device($mobile-width) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .ps-info {
+    margin: 0;
+    clear: right;
+    overflow: hidden;
+
+    ul.ps-links {
+      @extend .no-buffer;
+      list-style: none;
+
+      li {
+        display: block;
+        float: left;
+        width: 20%;
+        margin: 0;
+        padding: 0;
+
+        @include device($mobile-width) {
+          width: 50%;
+        }
+
+        a {
+          @include button($fg-dark, $bg-black, $fg-link);
+        }
+      }
+    }
+  }
 }

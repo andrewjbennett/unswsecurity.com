@@ -1,0 +1,42 @@
+{% assign person = site.data.people[include.person] %}
+<div class="person">
+  <div class="ps-image">
+    <img alt="{{ person.name }}" src="https://www.gravatar.com/avatar/{{ person.gravatar }}?s=96" />
+  </div>
+  <div class="ps-info">
+    <h2>{% include person_link.html person=include.person %}</h2>
+    <p>{{ person.bio | markdownify | smartify }}</p>
+    <ul class="ps-links">
+      {% if person.slack %}
+        <li>
+          <a class="button btn-slack" href="{{ site.slack }}/messages/@{{ person.slack }}/" target="_blank">Slack</a>
+        </li>
+      {% endif %}
+      {% if person.facebook %}
+        <li>
+          <a class="button btn-facebook" href="http://www.facebook.com/{{ person.facebook }}" target="_blank">Facebook</a>
+        </li>
+      {% endif %}
+      {% if person.twitter %}
+        <li>
+          <a class="button btn-twitter" href="http://twitter.com/{{ person.twitter }}" target="_blank">Twitter</a>
+        </li>
+      {% endif %}
+      {% if person.email %}
+        <li>
+          <a class="button btn-email" href="mailto:{{ person.email }}" target="_blank">E-Mail</a>
+        </li>
+      {% endif %}
+      {% if person.phone %}
+        <li>
+          <a class="button btn-phone" href="tel:{{ person.phone }}" target="_blank">Phone</a>
+        </li>
+      {% endif %}
+      {% if person.website %}
+        <li>
+          <a class="button btn-website" href="{{ person.website }}" target="_blank">Website</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
