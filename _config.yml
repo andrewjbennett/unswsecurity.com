@@ -21,6 +21,11 @@ signup: "https://goo.gl/8jnXAi"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.unswsecurity.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Collections
+collections:
+  events:
+    output: true
+
 # Defaults
 defaults:
   - scope:
