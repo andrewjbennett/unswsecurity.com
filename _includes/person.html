@@ -1,8 +1,10 @@
 {% assign person = site.data.people[include.person] %}
 <div class="person">
-  <div class="ps-image">
-    <img alt="{{ person.name }}" src="https://www.gravatar.com/avatar/{{ person.gravatar }}?s=96" />
-  </div>
+  {% if person.gravatar %}
+    <div class="ps-image">
+      <img alt="{{ person.name }}" src="https://www.gravatar.com/avatar/{{ person.gravatar }}?s=96" />
+    </div>
+  {% endif %}
   <div class="ps-info">
     <h2>{% include person_link.html person=include.person %}</h2>
     <p>{{ person.bio | markdownify | smartify }}</p>
@@ -20,6 +22,11 @@
       {% if person.twitter %}
         <li>
           <a class="button btn-twitter" href="http://twitter.com/{{ person.twitter }}" target="_blank">Twitter</a>
+        </li>
+      {% endif %}
+      {% if person.linkedin %}
+        <li>
+          <a class="button btn-linkedin" href="http://www.linkedin.com/in/{{ person.linkedin }}" target="_blank">LinkedIn</a>
         </li>
       {% endif %}
       {% if person.email %}

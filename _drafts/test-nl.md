@@ -2,6 +2,8 @@
 author: curtis
 title: "Test Newsletter"
 categories: newsletter ctf event sponsor
+author: curtis
+thumb: http://placehold.it/600x400
 ---
 
 # CTF Results

@@ -1,7 +1,8 @@
 <div class="events">
   <h1>Upcoming Events</h1>
-  {% for event in site.data.events %}
-  <div class="third event">
+  {% for event in site.events %}
+  {% include event_small.html event=event %}
+  <!--div class="third event">
     <h2>{{ event.name }}</h2>
     <p>{{ event.description }}</p>
 
@@ -13,6 +14,6 @@
 
     <h3>Location</h3>
     <p>{{ event.location }}</p>
-  </div>
+  </div-->
   {% endfor %}
 </div>

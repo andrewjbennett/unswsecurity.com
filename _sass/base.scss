@@ -12,7 +12,7 @@ header.site {
     font-size: 22pt;
     text-transform: uppercase;
     margin: 0;
-    padding: 0.2em 0.6em;
+    padding: 0.2em $spacing-small;
     float: left;
     clear: left;
     a {
@@ -60,7 +60,7 @@ header.site {
 
       &.shown {
         transition: max-height 0.5s;
-        max-height: 8em;
+        max-height: 16em;
       }
     }
 
@@ -93,6 +93,7 @@ header.site {
 
 footer.site {
   background-color: $bg-black;
+  border-top: $line-normal solid $fg-line;
 
   .wrapper {
     @extend .no-buffer;
@@ -133,6 +134,7 @@ footer.site {
   }
 
   ul {
+    font-family: $monospace-font;
     list-style: none;
     margin: 0.2em $spacing $spacing $spacing;
     padding: 0;
@@ -215,6 +217,24 @@ footer.site {
   }
 }
 
+.full, .half, .third, .quarter {
+  @extend .no-buffer;
+  text-align: center;
+  
+  h1 {
+    margin-top: $spacing;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0.2em;
+  }
+}
+
+.full {
+  width: auto;
+  float: none;
+  clear: both;
+}
 
 .half {
   width: 50%;
@@ -227,17 +247,7 @@ footer.site {
 }
 
 .quarter, .third, .half {
-  @extend .no-buffer;
   float: left;
-  text-align: center;
-  
-  h1 {
-    margin-top: $spacing-large;
-  }
-
-  h2, h3, h4, h5, h6 {
-    margin-top: 0.2em;
-  }
 
   @include device($tablet-width) {
     width: 50%;
@@ -313,6 +323,173 @@ footer.site {
           @include button($fg-dark, $bg-black, $fg-link);
         }
       }
+    }
+  }
+}
+
+.event {
+  @extend .no-buffer;
+
+  .header-img {
+    @extend .no-buffer;
+
+    img {
+      background-color: $tint-orange;
+      border-radius: $rounded-radius;
+    }
+  }
+
+  &.event-ctf .header-img img {
+    background-color: $tint-blue;
+  }
+
+  &.event-workshop .header-img img {
+    background-color: $tint-green;
+  }
+
+  // Image shown on full site
+  .header-img {
+    float: left;
+    clear: left;
+    margin: $spacing-small;
+    padding: 0;
+
+    img {
+      display: block;
+      width: 320px;
+      min-height: 214px;
+    }
+
+    @include device($tablet-width) {
+      float: none;
+      clear: both;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    @include device($mobile-width) {
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .event-summary {
+    @extend .no-buffer;
+    margin: $spacing-tiny 0;
+
+    ul.times, ul.links {
+      @extend .no-buffer;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        @extend .half;
+      }
+
+      li.location {
+        @extend .full;
+      }
+    }
+
+    ul.times li {
+      font-family: $headline-font;
+      font-weight: $headline-bold;
+      text-transform: uppercase;
+      color: $bg-dark;
+
+      .name, .time, .location {
+        display: block;
+        padding: 0.6em 0.6em 0.5em 0.6em;
+        overflow: none;
+      }
+
+      .name {
+        float: left;
+        clear: left;
+        margin: $spacing-tiny 0 $spacing-tiny $spacing-small;
+        background-color: $fg-link;
+        border-radius: $rounded-radius 0 0 $rounded-radius;
+        width: 3.5em;
+      }
+
+      .time, .location {
+        margin: $spacing-tiny $spacing-small;
+        background-color: $fg-dark;
+        border-radius: $rounded-radius;
+      }
+    }
+  }
+
+}
+
+.event.event-small {
+  @extend .third;
+  overflow: hidden;
+
+  p {
+    text-overflow: ellipsis;
+  }
+
+  h1 {
+    margin: $spacing-small $spacing;
+    font-size: 1.4em;
+  }
+
+  h2 {
+    margin: $spacing-tiny $spacing;
+    font-size: 1.2em;
+  }
+
+  .header-img {
+    float: none;
+    clear: both;
+
+    img {
+      width: 100%;
+      min-height: 180px;
+    }
+  }
+
+  .event-summary {
+    ul.times li, ul.links li {
+      float: none;
+      width: auto;
+      font-size: 0.9em;
+    }
+
+    ul.times li {
+      .name {
+        width: 3.5em;
+      }
+      .name, .time, .location {
+        padding: 0.3em 0.6em 0.2em 0.6em;
+      }
+    }
+  }
+}
+
+.sponsors {
+  @extend .no-buffer;
+  text-align: center;
+
+  .sponsor-img {
+    overflow: hidden;
+    margin: 2*$spacing-large;
+    height: 240px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 320px;
+      border-radius: $rounded-radius;
+
+      background-color: #FFFFFF;
     }
   }
 }

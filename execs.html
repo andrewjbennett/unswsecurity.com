@@ -29,14 +29,13 @@ site-map: true
   </thead>
   <tbody>
     {% for member in committee %}
-    {% if member.person %}
-      {% assign name = site.data.people[member.person].name %}
-    {% else %}
-      {% assign name = member.name %}
-    {% endif %}
       <tr>
         <td>{{ member.role }}</td>
-        <td>{{ name }}</td>
+        {% if member.person %}
+          <td>{% include person_link.html person=member.person %}</td>
+        {% else %}
+          <td>{{ member.name }}</td>
+        {% endif %}
       </tr>
     {% endfor %}
   </tbody>

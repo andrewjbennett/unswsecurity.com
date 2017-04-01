@@ -19,17 +19,24 @@ $bg-black: #070707;
 $bg-block: #3F3F3F;
 $fg-dark:  #F7F7F7;
 $fg-line:  #DFDFDF;
-$fg-link:  #4F9FF7;
+$fg-link:  #E76F2F;
 
 // Corporate
 $cp-slack:    #e32072;
-$cp-facebook: lighten(#3b5998, 8%);
+$cp-facebook: lighten(#3b5998, 10%);
+$cp-linkedin: lighten(#0077B5, 8%);
 $cp-orgsync:  #5BBF21;
 $cp-twitter:  #1DA1F2;
+
+// Tints
+$tint-orange: #F77F00;
+$tint-blue: #0000F7;
+$tint-green: #00F700;
 
 // Sizes
 $content-max: 1024px;
 
+$spacing-tiny: 4px;
 $spacing-small: 8px;
 $spacing: 12px;
 $spacing-large: 24px;
@@ -37,6 +44,8 @@ $spacing-large: 24px;
 $line-thin:   1px;
 $line-normal: 2px;
 $line-thick:  3px;
+
+$rounded-radius: 4px;
 
 $mobile-width: 640px;
 $tablet-width: 960px;

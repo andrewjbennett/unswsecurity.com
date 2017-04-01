@@ -1,0 +1,35 @@
+<div class="post-preview">
+  {% if include.post.thumb %}
+  <div class="thumb">
+    <img src="{{ include.post.thumb | absoulte_url }}" alt="{{ include.post.title }}" />
+  </div>
+  {% endif %}
+  <div class="summmary">
+    <h1>{{ include.post.title }}</h1>
+    <h2>{{ include.post.date | date: "%A, %-d %B %Y" }}</h2>
+    <ul class="author-img">
+      {% if post.authors %}
+        {% for author in include.post.authors %}
+        {% assign person = site.data.people[author] %}
+        <li>
+          <img alt="{{ person.name }}" src="https://www.gravatar.com/avatar/{{ person.gravatar }}?s=48" />
+          <span class="name">{{ person.name }}</span>
+        </li>
+        {% endfor %}
+        {% else %}{% if include.post.author %}
+        {% assign person = site.data.people[include.post.author] %}
+        <li>
+          <img alt="{{ person.name }}" src="https://www.gravatar.com/avatar/{{ person.gravatar }}?s=48" />
+          <span class="name">{{ person.name }}</span>
+        </li>
+        {% endif %}{% endif %}
+    </ul>
+    <div class="excerpt">
+      {% if include.post.excerpt %}
+        {{ include.post.excerpt | markdownify }}
+      {% else %}
+        {{ include.post.content | truncate: 2000 | markdownify }}
+      {% endif %}
+    </div>
+  </div>
+</div>

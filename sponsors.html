@@ -1,0 +1,20 @@
+---
+title: Sponsors
+site-map: true
+title-nav: true
+---
+
+{% for level in site.data.sponsors.levels %}
+<div class="sponsors">
+  <h1>{{ level[1].name }} Level Sponsors</h1>
+  {% assign sponsors = site.data.sponsors.sponsors | where: "level", level[0] %}
+  {% for sponsor in sponsors %}
+  <div class="{{ level[1].width }}">
+    <h2><a href="{{ sponser.link }}">{{ sponsor.name }}</a></h2>
+    <div class="sponsor-img">
+      <img src="http://none" />
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}

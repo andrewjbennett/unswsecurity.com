@@ -1,0 +1,9 @@
+---
+title: Events
+site-map: true
+title-nav: true
+---
+
+{% for event in site.events %}
+{% include event_full.html event=event %}
+{% endfor %}

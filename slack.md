@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Slack
+title: Join
 site-map: true
 title-nav: true
 ---

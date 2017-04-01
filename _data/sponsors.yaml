@@ -1,0 +1,38 @@
+# Sponsor levels and how much of the sponsor page they use
+levels:
+  platinum:
+    name: Platinum
+    width: full
+  gold:
+    name: Gold
+    width: half
+  silver:
+    name: Silver
+    width: third
+
+# Actual Sponsors
+sponsors:
+  - id: major_1
+    name: Major Sponsor
+    level: platinum
+    link: http://example.com/
+  - id: sponsor_1
+    name: Sponsor 1
+    level: gold
+    link: http://example.com/
+  - id: sponsor_2
+    name: Sponsor 2
+    level: gold
+    link: http://example.com/
+  - id: sponsor_3
+    name: Sponsor 3
+    level: gold
+    link: http://example.com/
+  - id: lesser_1
+    name: Sponsor 1
+    level: silver
+    link: http://example.com/
+  - id: lesser_2
+    name: Sponsor 2
+    level: silver
+    link: http://example.com/

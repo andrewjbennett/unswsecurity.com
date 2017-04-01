@@ -5,25 +5,35 @@
   overflow: hidden;
 }
 
+@mixin backlight($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: lighten($color, 20%);
+  }
+
+  &:active {
+    background-color: darken($color, 20%);
+  }
+}
+
 @mixin button($fg, $bg, $selected) {
   display: block;
-  border-radius: 4px;
+  border-radius: $rounded-radius;
   background-color: $fg;
   color: $bg;
   padding: 0.6em 0.6em 0.5em 0.6em;
-  margin: 4px 8px;
+  margin: $spacing-tiny $spacing-small;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   font-family: $headline-font;
   font-weight: $headline-weight;
 
-  &:hover {
-    background-color: lighten($fg, 10%);
-  }
+  @include backlight($fg);
 
-  &:active {
-    background-color: darken($fg, 10%);
+  &:hover {
+    text-decoration: none;
   }
 
   &:before {
@@ -33,15 +43,7 @@
   }
   
   &.selected {
-    background-color: $selected;
-  }
-
-  &.selected:hover {
-    background-color: lighten($selected, 10%);
-  }
-
-  &.selected:active {
-    background-color: darken($selected, 10%);
+    @include backlight($selected);
   }
 
   &.btn-register {
@@ -51,7 +53,7 @@
   }
 
   &.btn-orgsync {
-    background-color: $cp-orgsync;
+    @include backlight($cp-orgsync);
 
     &:before {
       content: '\f19d';
@@ -59,7 +61,7 @@
   }
 
   &.btn-slack {
-    background-color: $cp-slack;
+    @include backlight($cp-slack);
  
     &:before {
       content: '\f198';
@@ -67,7 +69,7 @@
  }
 
   &.btn-facebook {
-    background-color: $cp-facebook;
+    @include backlight($cp-facebook);
  
     &:before {
       content: '\f09a';
@@ -75,10 +77,18 @@
  }
 
   &.btn-twitter {
-    background-color: $cp-twitter;
+    @include backlight($cp-twitter);
  
     &:before {
       content: '\f099';
+    }
+ }
+
+  &.btn-linkedin {
+    @include backlight($cp-linkedin);
+ 
+    &:before {
+      content: '\f08c';
     }
  }
 
@@ -99,6 +109,11 @@
       content: '\f095';
     }
  }
+}
+
+// Default button
+a.button {
+  @include button($fg-dark, $bg-dark, $fg-link);
 }
 
 @mixin device($width) {

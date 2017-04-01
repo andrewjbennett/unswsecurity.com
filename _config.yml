@@ -32,6 +32,10 @@ defaults:
       path: ""
     values:
       layout: base
+  - scope:
+      type: events
+    values:
+      layout: event
 
 # Build settings
 timezone: Australia/Sydney

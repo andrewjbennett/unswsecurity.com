@@ -6,13 +6,6 @@ site-map: true
 
 <ul>
 {% for post in site.posts %}
-  <li>
-    <p><a href="{{ post.url | absolute-url }}">{{ post.title }}</a></p>
-    <ul>
-    {% for category in post.categories %}
-      <li>{{ category }}</li>
-    {% endfor %}
-    </ul>
-  </li>
+  {% include post_summary.html post=post %}
 {% endfor %}
 <ul>
