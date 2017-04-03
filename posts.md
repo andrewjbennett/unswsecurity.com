@@ -1,7 +1,7 @@
 ---
 title: Posts
 layout: base
-site-map: true
+#site-map: true
 ---
 
 <ul>

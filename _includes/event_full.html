@@ -14,10 +14,10 @@
     </ul>
     <ul class="links">
       {% if include.event.slack %}
-      <li><a href="{{ site.slack }}messages/{{ include.event.slack }}/" class="button btn-slack">Slack Channel</a></li>
+      <li><a href="{{ site.slack }}messages/{{ include.event.slack }}/" class="button btn-slack" target="_blank">Slack Channel</a></li>
       {% endif %}
       {% if include.event.facebook %}
-      <li><a href="{{ include.event.facebook }}" class="button btn-facebook">Facebook Event</a></li>
+      <li><a href="{{ include.event.facebook }}" class="button btn-facebook" target="_blank">Facebook Event</a></li>
       {% endif %}
     </ul>
     <div class="description">

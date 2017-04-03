@@ -75,6 +75,23 @@ table {
   }
 }
 
+blockquote {
+  margin: $spacing-small;
+  padding: $spacing-tiny $spacing-small;
+  border: {
+    width: 0 $line-thick;
+    style: solid;
+    color: $fg-dark;
+  }
+  background-color: $bg-light;
+  color: $fg-light;
+
+  &.notice {
+    border-color: $bg-notice;
+    background-color: lighten($bg-notice, 20%);
+  }
+}
+
 .anchor-show {
   display: none;
 

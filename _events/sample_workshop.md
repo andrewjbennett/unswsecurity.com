@@ -7,6 +7,7 @@ location: Some Lab
 slack: workshops
 type: workshop
 image: assets/events/sample_workshop.jpg
+hidden: true
 ---
 
 The *sample event* is your chance to CTF to your hears content.

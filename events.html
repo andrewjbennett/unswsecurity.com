@@ -14,9 +14,9 @@ title-nav: true
 {% endfor %}
 
 <h1>Past Events</h1>
-{% assign reverse_events = site.events | sort: "start", "last" %}
+{% assign reverse_events = sorted_events | reverse %}
 {% for event in reverse_events %}
-  {% if event.start < now %}
-    {% include event_full.html event=event %}
-  {% endif %}
+  {% unless event.hidden %}{% if event.start < now %} 
+    {% include event_small.html event=event thumb=true %}
+  {% endif %}{% endunless %}
 {% endfor %}

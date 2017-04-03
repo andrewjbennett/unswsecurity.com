@@ -261,14 +261,9 @@ footer.site {
 
 .events {
   @extend .content-block;
-  
-  .event {
-    text-align: left;
 
-    h3 {
-      margin-bottom: -$spacing-small;
-      font-size: 1em;
-    }
+  & > h1 {
+    text-align: center;
   }
 }
 

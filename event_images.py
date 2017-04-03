@@ -44,8 +44,9 @@ CTF_BACK      = path_join(IMAGE_DIR, "ctf_back.png")
 WORKSHOP_BACK = path_join(IMAGE_DIR, "workshop_back.png")
 MISC_BACK     = path_join(IMAGE_DIR, "event_back.png")
 
-IMAGE_MODE = "RGB"
-IMAGE_SIZE = (1280, 720)
+ARC_LOGO    = "assets/arc-wob.png"
+LOGO_SCALE  = 4
+LOGO_AFFINE = (LOGO_SCALE, 0, 0, 0, LOGO_SCALE, 0)
 
 def frontmatter(fd):
     """Load the frontmatter of a given file"""
@@ -85,6 +86,8 @@ def get_events():
                 if isfile(img_path):
                     event["img_mtime"] = getmtime(img_path)
                     event["img_old"] = event["mtime"] > event["img_mtime"]
+                else:
+                    event["img_old"] = True
 
             events[event_id] = event
 
@@ -104,10 +107,18 @@ def get_background(event):
 
     return image
 
+def get_logo():
+    """Get a sensibly sized ARC logo"""
+
+    logo = Image.open(ARC_LOGO)
+    logo_size = (logo.size[0] / LOGO_SCALE, logo.size[1] / LOGO_SCALE)
+
+    return logo.transform(logo_size, Image.AFFINE, LOGO_AFFINE)
+
 def date_string(original):
     """Get a pretty date string"""
     date = datetime.strptime(original, "%Y-%m-%dT%H:%M")
-    return date.strftime("%A, %d %B %Y")
+    return date.strftime("%A, %-d %B %Y")
 
 def center(image_size, block_size):
     return tuple([(image_size[n] - block_size[n]) / 2 for n in xrange(len(image_size))])
@@ -131,6 +142,12 @@ def render_header(event):
     date_pos = shift(center(image.size, date_size), (0, 32))
     draw.text(date_pos, date_text, font=MONTSERRAT_DATE)
 
+    # Add logo
+    logo = get_logo()
+    logo_pos = (image.size[0] - logo.size[0] - 24,
+                image.size[1] - logo.size[1] - 24)
+    image.paste(logo, logo_pos)
+
     image.save(event["image"])
 
 
@@ -142,7 +159,7 @@ if __name__ == "__main__":
         event = events[event_id]
         print "Checking event: {}".format(event_id)
         print "{} - {}".format(event["title"], date_string(event["start"]))
-        if "image" in event:
+        if "image" in event and event["img_old"]:
             print "Creating header..."
             render_header(event)
         print

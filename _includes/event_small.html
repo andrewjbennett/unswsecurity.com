@@ -5,12 +5,12 @@
         <img src="{{ include.event.image | absolute_url }}" alt="{{ include.event.title }}">
       </a>
     </div>
-    <!--h1><a href="{{ include.event.url | absolute_url}}">{{ include.event.title }}</a></h1>
-    <h2>{{ include.event.start | date: "%A, %-d %B %Y" }}</h2-->
+    {% unless include.thumb %}
     <ul class="times">
       <li><span class="name">From</span> <span class="time">{{ include.event.start | date: "%a, %-d %b %-I:%M %p"}}</span></li>
       <li><span class="name">Until</span> <span class="time">{{ include.event.end | date: "%a, %-d %b %-I:%M %p"}}</span></li>
       <li class="location"><span class="name">at</span> <span class="location">{{ include.event.location }}</span></li>
     </ul>
+    {% endunless %}
   </div>
 </div>

@@ -2,16 +2,17 @@
 #
 # These objects are used for post authors and committee members
 
+
 curtis:
   name: Curtis Millar
   slack: studley13
-  email: curtis@unswsecurity.com
-  twitter: CurtisMillar
-  gravatar: 423b9b3322b34e2769b2374cb4a63d8c
+  #email: curtis@unswsecurity.com
+  #twitter: CurtisMillar
+  gravatar: 64a3668f8db78815bf9666d69f06799b
   website: http://teamred.rocks/
-  phone: 0412 345 678
-  facebook: curtis.millar13
-  linkedin: curtis-millar-037aa893
+  #phone: 0412 345 678
+  #facebook: curtis.millar13
+  #linkedin: curtis-millar-037aa893
   bio: >
     This is a small bio about Curtis Millar. It is all in *plaintext*.
   page: >
@@ -19,14 +20,17 @@ curtis:
 
 andrew:
   name: Andrew Bennett
+  gravatar: 9bb9f3ee3ea1a088391de2f499212cdc
   slack: andrew
 
 sean:
   name: Sean Yeoh
+  gravatar: 96c31e45c3485579b67ac4bd729b5dbc
   slack: sy
 
 daniel:
   name: Daniel Phillips
+  gravatar: 30b8bda3c65c85247b7320d05b5abf8c
   slack: deeps
 
 jordan:
@@ -35,26 +39,32 @@ jordan:
 
 weilon:
   name: Weilon Ying
+  gravatar: 4e9032e1384c73a3d89049918f0d8450
   slack: whale
 
 clancy:
   name: Clancy Rye
+  gravatar: f493cea321c7bfb4ed0252f28eb9152e
   slack: gibs
 
 luke:
   name: Luke Cusack
+  gravatar: 23966f677432da03c1a32a50e9a5b8fc
   slack: ljc
 
 glenn:
   name: Glenn McGuire
+  gravatar: 77cf860db4ca14192102bb3e43001fc2
   slack: glem
 
 cameron:
   name: Cameron Lonsdale
+  gravatar: b00f763bb3a08925e96e69bfbb0597e0
   slack: clonsdale
 
 mitchell:
   name: Mitchell Shelton
+  gravatar: 5c7a0a546cc3960a33b87000c2cdfc70
   slack: mitty
 
 # Placeholder person
