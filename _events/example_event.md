@@ -7,6 +7,7 @@ sponsor: sample-sponsor
 location: Some place
 slack: ctfs
 type: meetup
+image: assets/events/example_event.jpg
 ---
 
 The *sample event* is your chance to CTF to your hears content.

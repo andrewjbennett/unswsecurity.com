@@ -1,19 +1,10 @@
 <div class="events">
   <h1>Upcoming Events</h1>
-  {% for event in site.events %}
-  {% include event_small.html event=event %}
-  <!--div class="third event">
-    <h2>{{ event.name }}</h2>
-    <p>{{ event.description }}</p>
-
-    <h3>Start</h3>
-    <p>{{ event.start | date: "%a, %d %b %I:%M %P"}}</p>
-
-    <h3>End</h3>
-    <p>{{ event.end | date: "%a, %d %b %I:%M %P"}}</p>
-
-    <h3>Location</h3>
-    <p>{{ event.location }}</p>
-  </div-->
+  {% assign now = site.time | date: "%F" %}
+  {% assign sorted = site.events | sort: "start" %}
+  {% for event in sorted %}
+    {% if event.start >= now %}
+      {% include event_small.html event=event %}
+    {% endif %}
   {% endfor %}
 </div>
