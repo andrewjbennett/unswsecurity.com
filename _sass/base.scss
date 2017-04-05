@@ -283,8 +283,8 @@ footer.site {
 
     img {
       border: $line-normal solid $fg-dark;
-      width: 96px;
-      height: 96px;
+      width: 128px;
+      height: 128px;
       margin: $spacing-large $spacing;
 
       @include device($mobile-width) {
@@ -306,7 +306,7 @@ footer.site {
       li {
         display: block;
         float: left;
-        width: 20%;
+        width: 25%;
         margin: 0;
         padding: 0;
 
