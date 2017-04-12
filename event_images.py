@@ -36,8 +36,9 @@ FONTS_DIR  = "/usr/share/fonts"
 FIRA_MONO  = ImageFont.truetype(path_join(FONTS_DIR, "fira/FiraMono-Medium.otf"), 22)
 FIRA_SANS  = ImageFont.truetype(path_join(FONTS_DIR, "fira/FiraSans-Medium.otf"), 22)
 MONTSERRAT = path_join(FONTS_DIR, "julietaula-montserrat/Montserrat-Bold.ttf")
-MONTSERRAT_TITLE = ImageFont.truetype(MONTSERRAT, 88)
-MONTSERRAT_DATE  = ImageFont.truetype(MONTSERRAT, 72)
+MONTSERRAT_TITLE     = ImageFont.truetype(MONTSERRAT, 88)
+MONTSERRAT_DATE      = ImageFont.truetype(MONTSERRAT, 72)
+MONTSERRAT_LOCATION  = ImageFont.truetype(MONTSERRAT, 64)
 
 IMAGE_DIR     = "./assets/img"
 CTF_BACK      = path_join(IMAGE_DIR, "ctf_back.png")
@@ -135,14 +136,20 @@ def render_header(event):
     # Get event title
     title_text = event["title"].upper()
     title_size = MONTSERRAT_TITLE.getsize(title_text)
-    title_pos = shift(center(image.size, title_size), (0, -96))
+    title_pos = shift(center(image.size, title_size), (0, -160))
     draw.text(title_pos, title_text, font=MONTSERRAT_TITLE)
 
     # Get event date
     date_text = date_string(event["start"])
     date_size = MONTSERRAT_DATE.getsize(date_text)
-    date_pos = shift(center(image.size, date_size), (0, 32))
+    date_pos = shift(center(image.size, date_size), (0, -40))
     draw.text(date_pos, date_text, font=MONTSERRAT_DATE)
+
+    # Get event location
+    event_text = event["location"]
+    event_size = MONTSERRAT_LOCATION.getsize(event_text)
+    event_pos = shift(center(image.size, event_size), (0, 56))
+    draw.text(event_pos, event_text, font=MONTSERRAT_LOCATION)
 
     # Add ARC logo
     arc_logo = get_logo(ARC_LOGO, ARC_LOGO_SCALE)
