@@ -1,5 +1,5 @@
 ---
-title: XCTF
+title: BCTF
 start: 2017-04-15T12:00
 end: 2017-04-17T12:00
 location: k17hackers.slack.com
