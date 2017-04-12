@@ -4,7 +4,7 @@ start: 2017-04-02T08:30
 end: 2017-04-03T08:30
 type: ctf
 image: assets/events/2017-04-02-dragonsector-ctf.jpg
-location: Slack
+location: k17hackers.slack.com
 slack: ctfs
 ---
 

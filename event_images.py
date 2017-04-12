@@ -118,10 +118,16 @@ def get_logo(logo_src, logo_scale):
 
     return logo.resize(scale, Image.LANCZOS)
 
-def date_string(original):
+def date_string(original, small=False):
     """Get a pretty date string"""
+
+    if small:
+        fmt = "%a, %-d %b"
+    else:
+        fmt = "%A, %-d %B %Y"
+
     date = datetime.strptime(original, "%Y-%m-%dT%H:%M")
-    return date.strftime("%A, %-d %B %Y")
+    return date.strftime(fmt)
 
 def center(image_size, block_size):
     return tuple([(image_size[n] - block_size[n]) / 2 for n in xrange(len(image_size))])
@@ -136,19 +142,24 @@ def render_header(event):
     # Get event title
     title_text = event["title"].upper()
     title_size = MONTSERRAT_TITLE.getsize(title_text)
-    title_pos = shift(center(image.size, title_size), (0, -160))
+    title_pos = shift(center(image.size, title_size), (0, -178))
     draw.text(title_pos, title_text, font=MONTSERRAT_TITLE)
 
     # Get event date
+    date_start = date_string(event["start"], True)
+    date_end = date_string(event["end"], True)
     date_text = date_string(event["start"])
+    if date_start != date_end:
+        date_text = "{} - {}".format(date_start, date_end)
+
     date_size = MONTSERRAT_DATE.getsize(date_text)
-    date_pos = shift(center(image.size, date_size), (0, -40))
+    date_pos = shift(center(image.size, date_size), (0, -56))
     draw.text(date_pos, date_text, font=MONTSERRAT_DATE)
 
     # Get event location
     event_text = event["location"]
     event_size = MONTSERRAT_LOCATION.getsize(event_text)
-    event_pos = shift(center(image.size, event_size), (0, 56))
+    event_pos = shift(center(image.size, event_size), (0, 40))
     draw.text(event_pos, event_text, font=MONTSERRAT_LOCATION)
 
     # Add ARC logo

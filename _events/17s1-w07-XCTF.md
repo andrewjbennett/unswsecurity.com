@@ -2,7 +2,7 @@
 title: XCTF
 start: 2017-04-15T12:00
 end: 2017-04-17T12:00
-location: Slack
+location: k17hackers.slack.com
 slack: ctfs
 type: ctf
 facebook: https://www.facebook.com/events/1822028788120622/

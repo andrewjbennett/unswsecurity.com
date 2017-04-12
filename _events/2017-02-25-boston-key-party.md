@@ -4,7 +4,7 @@ start: 2017-02-25T12:00
 end: 2017-02-27T12:00
 type: ctf
 image: assets/events/2017-02-25-boston-key-party.jpg
-location: Slack
+location: k17hackers.slack.com
 slack: ctfs
 ---
 
