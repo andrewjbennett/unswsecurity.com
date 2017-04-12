@@ -44,9 +44,11 @@ CTF_BACK      = path_join(IMAGE_DIR, "ctf_back.png")
 WORKSHOP_BACK = path_join(IMAGE_DIR, "workshop_back.png")
 MISC_BACK     = path_join(IMAGE_DIR, "event_back.png")
 
-ARC_LOGO    = "assets/arc-wob.png"
-LOGO_SCALE  = 4
-LOGO_AFFINE = (LOGO_SCALE, 0, 0, 0, LOGO_SCALE, 0)
+ARC_LOGO        = "assets/arc-wob.png"
+ARC_LOGO_SCALE  = 4
+
+SEC_LOGO        = "assets/logobanner_white.png"
+SEC_LOGO_SCALE  = 5
 
 def frontmatter(fd):
     """Load the frontmatter of a given file"""
@@ -107,13 +109,13 @@ def get_background(event):
 
     return image
 
-def get_logo():
+def get_logo(logo_src, logo_scale):
     """Get a sensibly sized ARC logo"""
 
-    logo = Image.open(ARC_LOGO)
-    logo_size = (logo.size[0] / LOGO_SCALE, logo.size[1] / LOGO_SCALE)
+    logo = Image.open(logo_src).convert("RGBA")
+    scale = (logo.size[0] / logo_scale, logo.size[1] / logo_scale)
 
-    return logo.transform(logo_size, Image.AFFINE, LOGO_AFFINE)
+    return logo.resize(scale, Image.LANCZOS)
 
 def date_string(original):
     """Get a pretty date string"""
@@ -127,7 +129,7 @@ def shift(position, displace):
     return (position[0] + displace[0], position[1] + displace[1])
 
 def render_header(event):
-    image = get_background(event)
+    image = get_background(event).convert("RGBA")
     draw = ImageDraw.Draw(image)
 
     # Get event title
@@ -142,11 +144,19 @@ def render_header(event):
     date_pos = shift(center(image.size, date_size), (0, 32))
     draw.text(date_pos, date_text, font=MONTSERRAT_DATE)
 
-    # Add logo
-    logo = get_logo()
-    logo_pos = (image.size[0] - logo.size[0] - 24,
-                image.size[1] - logo.size[1] - 24)
-    image.paste(logo, logo_pos)
+    # Add ARC logo
+    arc_logo = get_logo(ARC_LOGO, ARC_LOGO_SCALE)
+    arc_logo_pos = (image.size[0] - arc_logo.size[0] - 24,
+                image.size[1] - arc_logo.size[1] - 24)
+    image.paste(arc_logo, arc_logo_pos)
+
+    # Add SecSoc Logo
+    #sec_logo = get_logo(SEC_LOGO, SEC_LOGO_SCALE)
+    #sec_logo_left = (image.size[0] - sec_logo.size[0]) / 2
+    #sec_logo_pos = (-sec_logo_left, - 48,
+    #        image.size[0] - sec_logo_left, image.size[1] - 48)
+    #image.paste(sec_logo, sec_logo_pos)
+    #image = Image.alpha_composite(image, sec_logo.crop(sec_logo_pos))
 
     image.save(event["image"])
 
@@ -157,11 +167,10 @@ if __name__ == "__main__":
 
     for event_id in events:
         event = events[event_id]
-        print "Checking event: {}".format(event_id)
-        print "{} - {}".format(event["title"], date_string(event["start"]))
         if "image" in event and event["img_old"]:
-            print "Creating header..."
+            print "Creating Header: {}".format(event_id)
+            print "{} - {}".format(event["title"], date_string(event["start"]))
             render_header(event)
-        print
+            print
 
 

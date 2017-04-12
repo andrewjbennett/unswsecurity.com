@@ -3,8 +3,8 @@
   {% assign now = site.time | date: "%F" %}
   {% assign sorted = site.events | sort: "start" %}
   {% for event in sorted %}
-    {% if event.start >= now %}
+    {% unless event.hidden %}{% if event.start >= now %}
       {% include event_small.html event=event %}
-    {% endif %}
+      {% endif %}{% endunless %}
   {% endfor %}
 </div>

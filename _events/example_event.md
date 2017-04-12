@@ -1,7 +1,7 @@
 ---
 title: Sample Event
-start: 2017-04-15T11:00
-end: 2017-04-15T19:00
+start: 2017-03-15T11:00
+end: 2017-03-15T19:00
 facebook: http://facebook.com/facebook-link
 sponsor: sample-sponsor
 location: Some place
