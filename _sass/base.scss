@@ -151,15 +151,11 @@ footer.site {
 .content {
   min-height: 90vh;
 
-  h1 {
-    margin: $spacing-small $spacing;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.8em $spacing 0.2em $spacing;
   }
 
-  h2, h3, h4, h5, h6 {
-    margin: 0.2em $spacing;
-  }
-
-  p {
+  p, blockquote {
     margin: $spacing-small $spacing;
   }
 
@@ -171,6 +167,7 @@ footer.site {
       margin: 0 $spacing;
     }
   }
+
 }
 
 .join-links {

@@ -11,7 +11,7 @@ title-nav: true
 Fill out the sign-up form to be kept up to date with our events, merchandise
 sales and more!.
 
-[Sign-Up]({{ site.signup }}){:.button .btn-register}
+[Sign-Up]({{ site.signup }}){:.button .btn-register .full}
 
 <!--
 ## Newsletter
@@ -24,7 +24,7 @@ keep track of our performance in CTFs.
 
 ## OrgSync
 
-[Join on OrgSync]({{ site.orgsync }}){:.button .btn-orgsync}
+[Join on OrgSync]({{ site.orgsync }}){:.button .btn-orgsync .full}
 
 ## Slack
 
@@ -38,7 +38,7 @@ Our slack team, **k17hackers**, can be found at [k17hackers.slack.com]({{
 > us, it works :).
 {:.notice}
 
-[Join on Slack]({{ site.slack }}){:.button .btn-slack}
+[Join on Slack]({{ site.slack }}){:.button .btn-slack .full}
 
 For more information, check out [Slack's awesome
 instructions](https://get.slack.help/hc/en-us/articles/212675257-Join-a-Slack-team). 
@@ -48,5 +48,5 @@ instructions](https://get.slack.help/hc/en-us/articles/212675257-Join-a-Slack-te
 Join our facebook group to keep up to date with all of our events and everything
 else we do as a society.
 
-[Join on Facebook]({{ site.facebook }}){:.button .btn-facebook}
+[Join on Facebook]({{ site.facebook }}){:.button .btn-facebook .full}
 

@@ -41,6 +41,10 @@
     font-weight: normal;
     padding: 2px 8px;
   }
+
+  &.full {
+    margin: 0;
+  }
   
   &.selected {
     @include backlight($selected);
