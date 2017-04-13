@@ -283,10 +283,17 @@ footer.site {
       width: 128px;
       height: 128px;
       margin: $spacing-large $spacing;
+    }
 
-      @include device($mobile-width) {
-        width: 48px;
-        height: 48px;
+    @include device($mobile-width) {
+      float: none;
+      clear: both;
+
+      img {
+        display: block;
+        width: 256px;
+        height: 256px;
+        margin: $spacing-large auto 0 auto;
       }
     }
   }
