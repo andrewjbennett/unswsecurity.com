@@ -6,7 +6,7 @@
     </div>
   {% endif %}
   <div class="ps-info">
-    <h2>{% include person_link.html person=include.person %}</h2>
+    <h2>{% include person_link.html person=include.person %}{% if include.role %} - {{ include.role }}{% endif %}</h2>
     <p>{{ person.bio | markdownify | smartify }}</p>
     <ul class="ps-links">
       {% if person.slack %}

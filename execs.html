@@ -7,9 +7,8 @@ site-map: true
 <div class="committee">
   {% assign roles = site.data.committee.current | group_by: "role" %}
   {% for role in roles %}
-  <h2>{{ role.name }}</h2>
   {% for member in role.items %}
-    {% include person.html person=member.person %}
+    {% include person.html person=member.person role=role.name%}
   {% endfor %}
   {% endfor %}
 </div>
