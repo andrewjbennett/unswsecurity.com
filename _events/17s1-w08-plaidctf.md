@@ -4,6 +4,7 @@ start: 2017-04-22T07:00
 end: 2017-04-24T07:00
 location: k17hackers.slack.com
 slack: workshops
+facebook: https://www.facebook.com/events/1500060396700344/
 type: ctf
 image: assets/events/2017-04-22-plaidctf.jpg
 ---
