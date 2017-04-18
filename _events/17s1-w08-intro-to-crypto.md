@@ -5,7 +5,7 @@ end: 2017-04-24T14:00
 location: Sec Lab K17-G11
 slack: workshops
 type: workshop
-facebook: http://facebook.com/balh
+facebook: https://www.facebook.com/events/220752428408139/
 image: assets/events/2017-04-24-intro-to-crypto.jpg
 ---
 
