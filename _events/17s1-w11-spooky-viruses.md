@@ -1,11 +1,11 @@
 ---
 title: Spooky Scary Viruses 
-start: 2017-05-08T13:00
-end: 2017-05-08T15:00
+start: 2017-05-15T13:00
+end: 2017-05-15T15:00
 location: Sec Lab (K17-G11)
 slack: workshops
 type: workshop
-image: assets/events/2017-05-08-spooky-viruses.jpg
+image: assets/events/2017-05-15-spooky-viruses.jpg
 ---
 
 Spooky Scary Viruses: Reverse Engineering Malware 101
