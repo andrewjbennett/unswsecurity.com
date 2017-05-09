@@ -19,6 +19,9 @@
       {% if include.event.facebook %}
       <li><a href="{{ include.event.facebook }}" class="button btn-facebook" target="_blank">Facebook Event</a></li>
       {% endif %}
+      {% if include.event.registration %}
+      <li><a href="{{ include.event.registration }}" class="button btn-registration" target="_blank">Registration</a></li>
+      {% endif %}
     </ul>
     <div class="description">
       {{ include.event.content | markdownify }}
