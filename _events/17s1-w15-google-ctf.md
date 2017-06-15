@@ -13,7 +13,8 @@ It's understandable that people are busy with exams but since this is a well kno
 There is prize money associated with the finals and so it will be competitive, which means that the challenges will probably be non-trivial, but if you're keen definitely have a go anyway :)
 
 [https://g.co/ctf](https://g.co/ctf)
+
 Duration: Sat, 17 June 2017, 10:00 AEST — Mon, 19 June 2017, 09:59 AEST
-Location: #ctfs on k17hackers.slack.com (instructions on how to get to slack: [http://www.unswsecurity.com/join/](http://www.unswsecurity.com/join/))
+Location: #ctfs on k17hackers.slack.com (instructions on how to get to slack: [http://www.unswsecurity.com/join/](http://www.unswsecurity.com/join/)
 
 Information on how to join the K17 team for the CTF is on the slack
