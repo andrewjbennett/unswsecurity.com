@@ -2,7 +2,7 @@
 title: Committee  Meeting
 start: 2017-08-17T19:00
 end: 2017-08-17T20:00
-# facebook: http://facebook.com/facebook-link
+facebook: https://www.facebook.com/events/258342108011098/
 location: SecLab (K17-G11)
 slack: secsoc
 type: meeting
