@@ -1,7 +1,7 @@
 ---
 title: hack sh*t and chill
-start: 2017-08-25T15:00
-end: 2017-08-25T17:00
+start: 2017-08-25T16:00
+end: 2017-08-25T18:00
 location: Sec Lab (K17-G11)
 slack: workshops
 type: workshop
