@@ -1,5 +1,5 @@
 ---
-title: Point and Click Adventure
+title: Point and Click
 start: 2017-08-08T15:00
 end: 2017-08-08T17:00
 location: Sec Lab (K17-G11)
