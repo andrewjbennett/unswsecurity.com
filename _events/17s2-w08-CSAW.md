@@ -1,7 +1,7 @@
 ---
 title: CSAW
 start: 2017-09-16T06:00
-end: 2017-10-17T21:00
+end: 2017-09-17T21:00
 facebook: https://www.facebook.com/events/369362973478069/
 location: Sec Lab (K17-G11)
 slack: ctfs
