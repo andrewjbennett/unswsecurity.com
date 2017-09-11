@@ -19,5 +19,6 @@ one of the international onsite locations in the finals (Abu Dhabi for
 the Asia region). In the past K17 have ranked in top places in CSAW, so
 let's get together and hack some sh..stuff!
 
-Please register your attendance on the facebook event and let us know
-what time you think you'll be attending.
+Please register your attendance on [this google form][form]. 
+
+[form]: https://docs.google.com/forms/d/e/1FAIpQLScgvrKmiATXoekyUmXZVJVcBew9acnGPO_lCCaA9hZPoygk6w/viewform?usp=sf_link
